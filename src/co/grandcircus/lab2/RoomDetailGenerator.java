@@ -27,14 +27,17 @@ public class RoomDetailGenerator {
     
     // Prompts user for room dimensions, then calculates and prints room details.
     private static void roomDetailGenerator() {
+	// Get the room's dimensions.
 	double length = getValue("length");
 	double width = getValue("width");
 	double height = getValue("height");
 	
+	// Calculate the room's details.
 	double area = calculateArea(length, width);
 	double perimeter = calculatePerimeter(length, width);
 	double volume = calculateVolume(length, width, height);
 	
+	// Print the room's details.
 	System.out.println();
 	System.out.printf("The room's area is: %.2f square units.%n", area);
 	System.out.printf("The room's perimeter is: %.2f regular units.%n", perimeter);
